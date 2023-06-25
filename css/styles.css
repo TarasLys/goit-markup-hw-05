@@ -58,6 +58,7 @@ ol {
     padding-left: 0;
 }
 
+label,
 input,
 textarea,
 button {
@@ -570,7 +571,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .social-subscribe {
     display: block;
-    margin-left: 80px;
+    margin-left: auto;
 }
 
 .footer-social {
@@ -610,7 +611,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     border-radius: 4px;
     background: var(--iris-color);
-    gap: 16px;
+    /* gap: 16px; */
     width: 165px; 
 }
 
@@ -805,6 +806,39 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.32px;
 }
 
+/* --------------------------------инпут голый пример------------------------------------------ */
+
+ .input {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+ .input input {
+  
+    width: 100%;
+    /* height: 100%; */
+    background: #F4F6FC;
+    font-size: 15px;
+    color: #8798AD;
+    padding-right: 38px;
+    padding-left: 38px;
+    outline: none;
+}
+
+ .input svg {
+    position: absolute;
+    cursor: pointer;
+}
+
+ .input .emoj {
+    top: 50%;
+    transform: translatey(-50%);
+    left: 16px;
+    top: 20px;
+}
+/* --------------------------------инпут голый пример------------------------------------------ */
+/* ----------------------------icon input-------------------------------- */
 .form-label {
     color: var(--lightslate, #8E8F99);
     font-size: 12px;
@@ -814,7 +848,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     flex-direction: column;
     align-items: flex-start;
-    
+
     gap: 8px;
 }
 
@@ -826,56 +860,147 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
 }
 
+/* --------------------------------цвет input ?????????-------------------------------------- */
+.form-input:hover+.emoj, 
+.form-input:focus+.emoj,
+.form-input:active+.emoj {  
+    border: 1px solid var(--iris, #4D5AE5);
+    fill: var(--iris, #4D5AE5);
+}
+
+/* .emoj:hover,
+.emoj:focus,
+.emoj:active {
+    
+    fill: var(--iris, #4D5AE5);
+} */
+
+
+/* ------------------------------------------------------------------------ */
+
 .form-textarea {
     border-radius: 4px;
     border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
     width: 100%;
     height: 120px;
     flex-shrink: 0;
+    padding: 8px 16px;
+
+    color: var(--navy-blue-color, rgba(46, 47, 66, 0.40));
+       
+        font-size: 12px;
+        font-family: Roboto;
+        line-height: 14px;
+        letter-spacing: 0.48px;
+        outline: none;
 }
 
-/* .form-checkbox {
-    border-radius: 2px;
-    border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-} */
-
-input[type="checkbox"]:checked {
-    border-radius: 2px;
-        border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
+.form-textarea:hover,
+.form-textarea:active,
+.form-textarea:focus {
+    border: 1px solid var(--iris, #4D5AE5);
 }
-
 
 .form-button {
-    display: inline-flex;
+    display: flex;
+        align-items: center;
+        justify-content: center;
     padding: 16px 32px;
-    align-items: flex-start;
     border-radius: 4px;
     background: var(--iris, #4D5AE5);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     color: var(--white, #FFF);
     text-align: center;
     padding: 16px auto;
     font-size: 16px;
-    font-family: Roboto;
+    /* font-family: Roboto; */
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.64px;
     margin: 0 auto;
+    cursor: pointer;
 }
 
-.form-div {
-    display:inline-block;
-    padding: 0px;
+
+
+/* --------------чекбокс----------------------------------- */
+.check-div {
+    display:inline;
+    align-items: center;
+    margin-bottom: 24px;
     margin-top: 16px;
-    /* gap: 8px; */
+}
+
+.option {
+    display: block;
+    margin-bottom: 2.5px;
+}
+
+/* Check */
+
+.check {
+
+    padding-left: 24px;
+    color: #8E8F99;
+    font-size: 12px;
+    font-family: Roboto;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+}
+
+.check__input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.check__box {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: -25px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    border-radius: 0.25px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 0 0 0 0.5px #4A90E2;
+}
+
+/* Checked */
+
+.check__input:checked+.check__box {
+    /* background-color: #4A90E2; */
+
+    background-image: url(../images/click.svg);
+}
+
+/* Focused */
+
+.check__input:focus+.check__box {
+    box-shadow:
+        0 0 0 0.5px #4A90E2,
+        0 0 0 1px #7ED321;
+}
+
+/* Disabled */
+
+.check__input:disabled+.check__box {
+    box-shadow: 0 0 0 0.5px #9B9B9B;
+}
+
+.check__input:checked:disabled+.check__box {
+    background-color: #9B9B9B;
+}
+/* ------------------------чекбокс--------------------------------- */
+
+.check-link {
+    color: var(--iris-color);
 }
 
 
@@ -883,44 +1008,4 @@ input[type="checkbox"]:checked {
 
 
 
-input[type="checkbox"] {
-    display: none;
-}
-
-.label-checkbox {
-    color: #000;
-    cursor: default;
-    font-weight: normal;
-    line-height: 30px;
-    padding: 16px 0;
-    vertical-align: middle;
-}
-
-.label-checkbox:before {
-    content: " ";
-    color: #000;
-    display: inline-block;
-    /* шрифт Awesome*/
-    font-family: "Roboto", sans-serif;
-    margin-right: 8px;
-    position: relative;
-    text-align: center;
-    text-indent: 0px;
-    width: 15px;
-    height: 15px;
-    background: #FFF;
-    border: 1px solid #e3e3e3;
-    border-image: initial;
-    vertical-align: middle;
-}
-
-input:checked+.label-checkbox:before {
-    /* глифон - галочка */
-    content: "href="./images/icons.svg#checkbox"";
-}
-
-input:disabled+.label-checkbox:before {
-    background: #eee;
-    color: #aaa;
-}
 
