@@ -554,7 +554,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--cloud-color);
     width: 264px;
 }
-
+/* -------------------дивы и форма футера-------------------- */
 .direction-social {
     display: flex;
     align-items: baseline;
@@ -562,18 +562,29 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .soc {
     display: block;
-    margin-right: 120px;
+    margin-right: auto;
 }
 
 .social {
     display: block;
 }
 
-.social-subscribe {
-    display: block;
-    margin-left: auto;
+.div-subscribe {
+    /* display: flex; */
+        margin-left: 80px;
 }
 
+
+.social-subscribe {
+display: flex;
+    
+
+
+    
+    /* gap 24px; */
+    
+}
+/* ------------------------------------------- */
 .footer-social {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -582,21 +593,35 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.02em;
     color: var(--white-color);
     margin-bottom: 16px;
+    
 }
 
+.label-subscribe {
+
+}  
+
 .input-subscribe {
+    
     border-radius: 4px;
     border: 1px solid var(--white, #FFF);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: var(--white-color);
     font-size: 12px;
-    line-height: 24px;
-    letter-spacing: 0.48px;
-    background: var(--navy-blue-color);
+    line-height: var(--heightp-line);
+    letter-spacing: 0.04em;
+    /* background: var(--navy-blue-color); */
     width: 264px;
     height: 40px;
+    background-color: transparent;
+    padding-left: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
     margin-right: 24px;
-    padding: 8px 16px;
+    /* padding: 8px 16px; */
+}
+
+.input-subscribe::placeholder {
+    color: #ffffff;
 }
 
 .button-subscribe {
@@ -604,15 +629,23 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 16px;
     font-weight: 500;
     line-height: var(--heightp-line); 
-    letter-spacing: 0.64px;
+    letter-spacing: 0.04em;
+    font-family: "Roboto", sans-serif;
     display: inline-flex;
-    padding: 8px 24px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     border-radius: 4px;
     background: var(--iris-color);
-    gap: 16px;
-    width: 165px; 
+    border: none;
+    border: 0;
+    min-width: 165px;
+    height: 40px;
+    padding: 8px 24px;
+}
+
+.icon-subscribe {
+    margin-left: 16px;
 }
 
 .customers-links .customers-link {
@@ -795,17 +828,26 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .form-modal {
     display: flex;
     flex-direction: column;
-    margin: 72px 24px auto 24px;
+    margin: 72px 24px 24px 24px;
     /* background-color: burlywood; */
     
 }
-
+/* ------------------------form---------------------- */
 .all-input {
     width: 100%;
     /* background-color: #31D0AA; */
     margin-top: 16px;
     padding: 0px;
 }
+
+.name-input {
+    margin-bottom: 8px;
+}
+
+.textarea-input {
+    margin-bottom: 16px;
+}
+
 
 
 .form-p {
@@ -814,8 +856,9 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: var(--heightp-line);
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 
 /* --------------------------------инпут голый пример------------------------------------------ */
@@ -836,8 +879,8 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background: #ffffff;
     font-size: 15px;
     color: #2E2F4266;
-    padding-right: 38px;
-    padding-left: 38px;
+    /* padding-right: 38px;
+    padding-left: 38px; */
     
 }
 
@@ -851,18 +894,20 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translatey(-50%);
     left: 16px;
     top: 20px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* --------------------------------инпут голый пример------------------------------------------ */
 /* ----------------------------icon input-------------------------------- */
 .form-label {
+    display: block;
     color: var(--lightslate, #8E8F99);
     font-size: 12px;
     font-family: Roboto;
-    line-height: 14px;
-    letter-spacing: 0.48px;
+    line-height: var(--heightlogo-line);
+    letter-spacing: 0.04em;
     flex-direction: column;
     align-items: flex-start;
-    /* padding-bottom: 4px; */
+    margin-bottom: 4px;
     
 }
 
@@ -872,7 +917,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
-    outline: none;
+    background-color: transparent;
+    /* outline: none; */
+    outline: transparent;
+    padding-left: 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------------------цвет input ?????????-------------------------------------- */
@@ -897,23 +946,23 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--navy-blue-color, rgba(46, 47, 66, 0.40));   
     font-size: 12px;
     font-family: Roboto;
-    line-height: 14px;
-    letter-spacing: 0.48px;
+    line-height: var(--heightlogo-line);
+    letter-spacing: 0.04em;
     resize: none;
-    outline: none;
-    margin-bottom: 0;
-    
+    outline: transparent;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-textarea:hover,
-.form-textarea:active,
+/* .form-textarea:hover,
+.form-textarea:active, */
 .form-textarea:focus {
-    border: 1px solid var(--iris, #4D5AE5);
+    border-color: var(--iris, #4D5AE5);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-button {
-    display: flex;
+    display: block;
         align-items: center;
         justify-content: center;
     padding: 16px 32px;
@@ -926,12 +975,14 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     padding: 16px auto;
     font-size: 16px;
-    /* font-family: Roboto; */
+    font-family: Roboto;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.64px;
+    line-height: var(--heightp-line);
+    letter-spacing: 0.04em;
     margin: 0 auto;
     cursor: pointer;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -962,11 +1013,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: #8E8F99;
     font-size: 12px;
     font-family: Roboto;
-    line-height: 14px;
-    letter-spacing: 0.48px;
+    line-height: var(--heightlogo-line);
+    letter-spacing: 0.04em;
 }
-
-.check__input {
+/* ----------------------visually-hidden------------------------------------ */
+.check-input {
     display: block;
     position: absolute;
     clip: rect(0 0 0 0);
@@ -975,26 +1026,62 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin: -1px;
 }
 
-.check__box {
+/* .check-input {
+    position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+} */
+
+
+/* .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+} */
+
+/* ------------------------------------------------------------ */
+.check-box {
+
     position: absolute;
     margin-top: 1px;
     margin-left: -25px;
     width: 16px;
     height: 16px;
     overflow: hidden;
-    border-radius: 0.25px;
+    border-radius: 2px;
     background-color: white;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     box-shadow: 0 0 0 0.5px #2E2F4266;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
 }
 
 /* Checked */
 
-.check__input:checked+.check__box {
-    /* background-color: #4A90E2; */
-
+.check-input:checked+.check-box {
+    border: none;
+    background-color: #404bbf;
     background-image: url(../images/click.svg);
+    fill: #F4F4FD;
 }
 
 /* Focused */
