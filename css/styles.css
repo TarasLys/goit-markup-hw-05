@@ -611,7 +611,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     border-radius: 4px;
     background: var(--iris-color);
-    /* gap: 16px; */
+    gap: 16px;
     width: 165px; 
 }
 
@@ -776,6 +776,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .button-close:hover {
     background-color: var(--ocean-color);
     border: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-modal {
@@ -788,13 +789,24 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .button-close:focus .icon-modal,
 .button-close:hover .icon-modal {
     fill: var(--white-color);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-modal {
     display: flex;
     flex-direction: column;
-    margin: 72px 24px 24px 24px;
+    margin: 72px 24px auto 24px;
+    /* background-color: burlywood; */
+    
 }
+
+.all-input {
+    width: 100%;
+    /* background-color: #31D0AA; */
+    margin-top: 16px;
+    padding: 0px;
+}
+
 
 .form-p {
     color: var(--navyblue, #2E2F42);
@@ -808,30 +820,33 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* --------------------------------инпут голый пример------------------------------------------ */
 
- .input {
+
+ .div-input {
     width: 100%;
-    height: 50px;
+    height: auto;
     position: relative;
+    padding-bottom: 8px;
+    
+    
+
 }
 
- .input input {
-  
+ .div-input input {
     width: 100%;
-    /* height: 100%; */
-    background: #F4F6FC;
+    background: #ffffff;
     font-size: 15px;
-    color: #8798AD;
+    color: #2E2F4266;
     padding-right: 38px;
     padding-left: 38px;
-    outline: none;
+    
 }
 
- .input svg {
+ .div-input svg {
     position: absolute;
     cursor: pointer;
 }
 
- .input .emoj {
+ .div-input .emoj {
     top: 50%;
     transform: translatey(-50%);
     left: 16px;
@@ -845,11 +860,10 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-family: Roboto;
     line-height: 14px;
     letter-spacing: 0.48px;
-
     flex-direction: column;
     align-items: flex-start;
-
-    gap: 8px;
+    /* padding-bottom: 4px; */
+    
 }
 
 .form-input {
@@ -858,24 +872,19 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
+    outline: none;
 }
 
 /* --------------------------------цвет input ?????????-------------------------------------- */
-.form-input:hover+.emoj, 
-.form-input:focus+.emoj,
-.form-input:active+.emoj {  
-    border: 1px solid var(--iris, #4D5AE5);
+
+.div-input:focus-within {
+    
     fill: var(--iris, #4D5AE5);
 }
 
-/* .emoj:hover,
-.emoj:focus,
-.emoj:active {
-    
-    fill: var(--iris, #4D5AE5);
-} */
-
-
+.form-input:focus-within {
+    border: 1px solid var(--iris, #4D5AE5);
+}
 /* ------------------------------------------------------------------------ */
 
 .form-textarea {
@@ -885,20 +894,22 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 120px;
     flex-shrink: 0;
     padding: 8px 16px;
-
-    color: var(--navy-blue-color, rgba(46, 47, 66, 0.40));
-       
-        font-size: 12px;
-        font-family: Roboto;
-        line-height: 14px;
-        letter-spacing: 0.48px;
-        outline: none;
+    color: var(--navy-blue-color, rgba(46, 47, 66, 0.40));   
+    font-size: 12px;
+    font-family: Roboto;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+    resize: none;
+    outline: none;
+    margin-bottom: 0;
+    
 }
 
 .form-textarea:hover,
 .form-textarea:active,
 .form-textarea:focus {
     border: 1px solid var(--iris, #4D5AE5);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-button {
@@ -927,10 +938,16 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* --------------чекбокс----------------------------------- */
 .check-div {
-    display:inline;
+    display: inline-flex;
     align-items: center;
+    align-items: flex-start;
+
+    /* display:inline;
+    align-items: center; */
     margin-bottom: 24px;
-    margin-top: 16px;
+    margin-top: 8px;
+    margin-left: 2px;
+    /* background-color: coral; */
 }
 
 .option {
@@ -941,7 +958,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* Check */
 
 .check {
-
     padding-left: 24px;
     color: #8E8F99;
     font-size: 12px;
@@ -951,6 +967,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check__input {
+    display: block;
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
@@ -969,7 +986,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: white;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    box-shadow: 0 0 0 0.5px #4A90E2;
+    box-shadow: 0 0 0 0.5px #2E2F4266;
 }
 
 /* Checked */
@@ -982,21 +999,21 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* Focused */
 
-.check__input:focus+.check__box {
+/* .check__input:focus+.check__box {
     box-shadow:
         0 0 0 0.5px #4A90E2,
         0 0 0 1px #7ED321;
-}
+} */
 
 /* Disabled */
 
-.check__input:disabled+.check__box {
+/* .check__input:disabled+.check__box {
     box-shadow: 0 0 0 0.5px #9B9B9B;
 }
 
 .check__input:checked:disabled+.check__box {
     background-color: #9B9B9B;
-}
+} */
 /* ------------------------чекбокс--------------------------------- */
 
 .check-link {
