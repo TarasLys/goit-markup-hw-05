@@ -58,12 +58,12 @@ ol {
     padding-left: 0;
 }
 
-label,
+/* label,
 input,
-textarea,
+textarea, 
 button {
     font-family: "Roboto", sans-serif;
-}
+} */
 
 .logo-span {
 
@@ -597,7 +597,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }  
 
 .input-subscribe {
-    
+    font-family: "Roboto", sans-serif;
     border-radius: 4px;
     border: 1px solid var(--white, #FFF);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -844,7 +844,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-input {
-    /* margin-bottom: 16px; */
+    margin-bottom: 16px;
 }
 
 
@@ -911,15 +911,16 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
+    background-color: transparent;
     width: 100%;
     height: 40px;
     flex-shrink: 0;
     border-radius: 4px;
-    background-color:transparent;
     border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
-    outline:transparent;
+    outline: transparent;
     padding-left: 38px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 /* --------------------------------цвет input ?????????-------------------------------------- */
@@ -960,6 +961,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-button {
+    font-family: "Roboto", sans-serif;
     display: block;
     align-items: center;
     justify-content: center;
@@ -972,7 +974,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--white, #FFF);
     text-align: center;
     padding: 16px auto;
-    font-family: "Roboto", sans-serif
     font-size: 16px;
     font-family: Roboto;
     font-weight: 500;
@@ -998,13 +999,12 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     align-items: flex-start;
-
+    margin-bottom: 24px;
+    
     /* display:inline;
     align-items: center; */
-    margin-bottom: 24px;
-    margin-top: 8px;
     /* margin-left: 2px; */
-    /* background-color: coral; */
+    
     
 
 }
@@ -1023,7 +1023,9 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 .check-box {
-
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     margin-top: -1px;
     margin-right: 0px;
@@ -1038,24 +1040,16 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0 0 0.5px #2E2F4266;
     border: 1px solid rgba(46, 47, 66, 0.4);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     fill: transparent;
 }
 
 .check-input:checked+.check-label .check-box {
     border: none;
     background-color: #404bbf;
-    /* background-image: url(../images/click.svg); */
     fill: #F4F4FD;
+
+    /* background-image: url(../images/click.svg); */
 }
-
-/* ------------------------чекбокс--------------------------------- */
-
-
-
-
 
 
 .check-link {
