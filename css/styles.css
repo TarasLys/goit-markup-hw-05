@@ -58,12 +58,12 @@ ol {
     padding-left: 0;
 }
 
-/* label,
+label,
 input,
 textarea, 
 button {
     font-family: "Roboto", sans-serif;
-} */
+}
 
 .logo-span {
 
@@ -598,13 +598,14 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .input-subscribe {
     font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: var(--heightp-line);
+    letter-spacing: 0.04em;
     border-radius: 4px;
     border: 1px solid var(--white, #FFF);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: var(--white-color);
-    font-size: 12px;
-    line-height: var(--heightp-line);
-    letter-spacing: 0.04em;
+    
     /* background: var(--navy-blue-color); */
     width: 264px;
     height: 40px;
@@ -901,7 +902,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
     color: var(--lightslate, #8E8F99);
     font-size: 12px;
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     line-height: var(--heightlogo-line);
     letter-spacing: 0.04em;
     flex-direction: column;
@@ -911,7 +912,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
-    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: var(--heightp-line);
+    letter-spacing: 0.04em;
+    background-color:transparent;
     width: 100%;
     height: 40px;
     flex-shrink: 0;
@@ -975,7 +980,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     padding: 16px auto;
     font-size: 16px;
-    font-family: Roboto;
     font-weight: 500;
     line-height: var(--heightp-line);
     letter-spacing: 0.04em;
@@ -989,24 +993,12 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* --------------чекбокс----------------------------------- */
 .check-div {
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 24px;
-    font-size: 12px;
-    line-height: 14px; */
-
-    display: inline-flex;
-    align-items: center;
-    align-items: flex-start;
+    /* display: inline-flex;
+    align-items: flex-start; */
     margin-bottom: 24px;
     
-    /* display:inline;
-    align-items: center; */
+    
     /* margin-left: 2px; */
-    
-    
-
 }
 
 .check-label {
@@ -1020,16 +1012,14 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         /* margin-bottom: 2.5px; */
 }
 
-
-
 .check-box {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    margin-top: -1px;
+    margin-top: -2px;
     margin-right: 0px;
-    margin-left: -25px;
+    margin-left: -24px;
     width: 16px;
     height: 16px;
     overflow: hidden;
@@ -1048,7 +1038,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #404bbf;
     fill: #F4F4FD;
 
-    /* background-image: url(../images/click.svg); */
+    
 }
 
 
