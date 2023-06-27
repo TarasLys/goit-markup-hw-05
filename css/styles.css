@@ -937,7 +937,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .form-input:focus-within {
     border: 1px solid var(--iris, #4D5AE5);
-    background-color: transparent;
+    
 }
 /* ------------------------------------------------------------------------ */
 
@@ -1035,7 +1035,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-input:checked+.check-label .check-box {
-    display: inline-flex;
+    
     border: none;
     background-color: #404bbf;
     fill: #F4F4FD;
