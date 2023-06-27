@@ -835,7 +835,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .all-input {
     width: 100%;
     /* background-color: #31D0AA; */
-    margin-top: 16px;
+    /* margin-top: 16px; */
     padding: 0px;
 }
 
@@ -844,7 +844,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-input {
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
 }
 
 
@@ -867,7 +867,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: auto;
     position: relative;
-    padding-bottom: 8px;
+    /* padding-bottom: 8px; */
     
     
 
@@ -915,10 +915,9 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 40px;
     flex-shrink: 0;
     border-radius: 4px;
+    background-color:transparent;
     border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
-    background-color: transparent;
-    /* outline: none; */
-    outline: transparent;
+    outline:transparent;
     padding-left: 38px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -942,7 +941,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 120px;
     flex-shrink: 0;
     padding: 8px 16px;
-    color: var(--navy-blue-color, rgba(46, 47, 66, 0.40));   
+    color: rgba(46, 47, 66, 0.4);
     font-size: 12px;
     font-family: Roboto;
     line-height: var(--heightlogo-line);
@@ -962,8 +961,8 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .form-button {
     display: block;
-        align-items: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
     padding: 16px 32px;
     border-radius: 4px;
     background: var(--iris, #4D5AE5);
@@ -973,6 +972,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--white, #FFF);
     text-align: center;
     padding: 16px auto;
+    font-family: "Roboto", sans-serif
     font-size: 16px;
     font-family: Roboto;
     font-weight: 500;
@@ -988,6 +988,13 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* --------------чекбокс----------------------------------- */
 .check-div {
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 14px; */
+
     display: inline-flex;
     align-items: center;
     align-items: flex-start;
@@ -996,67 +1003,30 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center; */
     margin-bottom: 24px;
     margin-top: 8px;
-    margin-left: 2px;
+    /* margin-left: 2px; */
     /* background-color: coral; */
+    
+
 }
 
-.option {
+.check-label {
     display: block;
-    margin-bottom: 2.5px;
-}
-
-/* Check */
-
-.check {
     padding-left: 24px;
     color: #8E8F99;
     font-size: 12px;
     font-family: Roboto;
     line-height: var(--heightlogo-line);
     letter-spacing: 0.04em;
-}
-/* ----------------------visually-hidden------------------------------------ */
-.check-input {
-    display: block;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+        /* margin-bottom: 2.5px; */
 }
 
-/* .check-input {
-    position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-} */
 
 
-/* .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-} */
-
-/* ------------------------------------------------------------ */
 .check-box {
 
     position: absolute;
-    margin-top: 1px;
+    margin-top: -1px;
+    margin-right: 0px;
     margin-left: -25px;
     width: 16px;
     height: 16px;
@@ -1074,33 +1044,19 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: transparent;
 }
 
-/* Checked */
-
-.check-input:checked+.check-box {
+.check-input:checked+.check-label .check-box {
     border: none;
     background-color: #404bbf;
-    background-image: url(../images/click.svg);
+    /* background-image: url(../images/click.svg); */
     fill: #F4F4FD;
 }
 
-/* Focused */
-
-/* .check__input:focus+.check__box {
-    box-shadow:
-        0 0 0 0.5px #4A90E2,
-        0 0 0 1px #7ED321;
-} */
-
-/* Disabled */
-
-/* .check__input:disabled+.check__box {
-    box-shadow: 0 0 0 0.5px #9B9B9B;
-}
-
-.check__input:checked:disabled+.check__box {
-    background-color: #9B9B9B;
-} */
 /* ------------------------чекбокс--------------------------------- */
+
+
+
+
+
 
 .check-link {
     color: var(--iris-color);
