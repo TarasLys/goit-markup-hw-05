@@ -950,7 +950,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 8px 16px;
     color: rgba(46, 47, 66, 0.4);
     font-size: 12px;
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     line-height: var(--heightlogo-line);
     letter-spacing: 0.04em;
     resize: none;
@@ -994,8 +994,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* --------------чекбокс----------------------------------- */
 .check-div {
-    /* display: inline-flex;
-    align-items: flex-start; */
+    display: flex;
     margin-bottom: 24px;
     
     
@@ -1039,8 +1038,6 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     background-color: #404bbf;
     fill: #F4F4FD;
-
-    
 }
 
 
