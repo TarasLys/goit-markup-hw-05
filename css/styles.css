@@ -592,9 +592,9 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
-.label-subscribe {
+/* .label-subscribe {
 
-}  
+}   */
 
 .input-subscribe {
     font-family: "Roboto", sans-serif;
@@ -832,7 +832,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /* background-color: burlywood; */
     
 }
-/* ------------------------form---------------------- */
+/* ------------------------------------------- */
 .all-input {
     width: 100%;
     /* background-color: #31D0AA; */
@@ -861,7 +861,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-bottom: 16px;
 }
 
-/* --------------------------------инпут голый пример------------------------------------------ */
+/* ------------------------------------------------------------------------ */
 
 
  .div-input {
@@ -869,16 +869,13 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: auto;
     position: relative;
     /* padding-bottom: 8px; */
-    
-    
-
 }
 
  .div-input input {
     width: 100%;
-    background: #ffffff;
+    background-color: transparent;
     font-size: 15px;
-    color: #2E2F4266;
+    color: var(--navy-blue-color);
     /* padding-right: 38px;
     padding-left: 38px; */
     
@@ -896,11 +893,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 20px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* --------------------------------инпут голый пример------------------------------------------ */
-/* ----------------------------icon input-------------------------------- */
+/* ------------------------------------------------------------------------ */
+/* --------------------------------------------------------- */
 .form-label {
     display: block;
-    color: var(--lightslate, #8E8F99);
+    color: var(--light-slate-color);
     font-size: 12px;
     font-family: "Roboto", sans-serif;
     line-height: var(--heightlogo-line);
@@ -911,41 +908,40 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
+
+
+/* --------------------------------------------------------------- */
+
 .form-input {
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     line-height: var(--heightp-line);
     letter-spacing: 0.04em;
-    /* flex-shrink: 0; */
-
     width: 100%;
     height: 40px;
     border-radius: 4px;
-    
     border: 1px solid rgba(46, 47, 66, 0.4);
     padding-left: 38px;
     outline: transparent;
     background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
 }
 
-/* --------------------------------цвет input ?????????-------------------------------------- */
+
 
 .div-input:focus-within {
-    
-    fill: var(--iris, #4D5AE5);
+    fill: var(--iris-color);
 }
 
 .form-input:focus-within {
-    border: 1px solid var(--iris, #4D5AE5);
-    background-color: transparent;
+    border: 1px solid var(--iris-color);
+    
 }
 /* ------------------------------------------------------------------------ */
 
 .form-textarea {
     border-radius: 4px;
-    border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
+    border: 1px solid rgba(46, 47, 66, 0.40);
     width: 100%;
     height: 120px;
     flex-shrink: 0;
@@ -964,7 +960,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* .form-textarea:hover,
 .form-textarea:active, */
 .form-textarea:focus {
-    border-color: var(--iris, #4D5AE5);
+    border-color: var(--iris-color);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -975,11 +971,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     justify-content: center;
     padding: 16px 32px;
     border-radius: 4px;
-    background: var(--iris, #4D5AE5);
+    background: var(--iris-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     min-width: 169px;
     height: 56px;
-    color: var(--white, #FFF);
+    color: var(--white-color);
     text-align: center;
     padding: 16px auto;
     font-size: 16px;
@@ -994,24 +990,22 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 
-/* --------------чекбокс----------------------------------- */
+/* -------------------------------------------- */
 .check-div {
     display: flex;
     margin-bottom: 24px;
-    
-    
     /* margin-left: 2px; */
 }
 
 .check-label {
     display: block;
-    padding-left: 24px;
-    color: #8E8F99;
+    margin-left: 24px;
+    color: var(--light-slate-color); 
     font-size: 12px;
     font-family: Roboto;
     line-height: var(--heightlogo-line);
     letter-spacing: 0.04em;
-        /* margin-bottom: 2.5px; */
+    /* margin-bottom: 2.5px; */
 }
 
 .check-box {
@@ -1027,7 +1021,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /* position: absolute; */
     margin-top: -2px;
-    margin-right: 0px;
+    margin-right: 8px;
     margin-left: -24px;
     /* overflow: hidden;
     background-color: white;
@@ -1040,8 +1034,8 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .check-input:checked+.check-label .check-box {
     
     border: none;
-    background-color: #404bbf;
-    fill: #F4F4FD;
+    background-color: var(--ocean-color);
+    fill: var(--cloud-color);
 }
 
 
